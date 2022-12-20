@@ -1,42 +1,34 @@
-# terraform-spotinst-ocean-aws-ecs
-=======
-# [NAME] Terraform Module
+# Spot Ocean ECS Terraform Module
 
-Short description of the module.
-
-## Table of Contents
-
-- [Prerequisites](#prerequisites)
-- [Usage](#usage)
-- [Examples](#examples)
-- [Requirements](#requirements)
-- [Providers](#providers)
-- [Modules](#modules)
-- [Resources](#resources)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Documentation](#documentation)
-- [Getting Help](#getting-help)
-- [Community](#community)
-- [Contributing](#contributing)
-- [License](#license)
+## Prerequisites
+* Have an ECS cluster
+* Spot Account and API Token defined in the Spotinst Terraform Provider
 
 ## Usage
-
 ```hcl
-module "[NAME]" {
-  source = "spotinst/[NAME]/spotinst"
+module "ocean_ecs" {
+  source = "spotinst/ocean-aws-ecs/spotinst"
 
-  ...
+  cluster_name                    = "ECS-Workshop"
+  region                          = "us-west-2"
+  subnet_ids                      = ["subnet-123456789,subnet-123456789"]
+  security_group_ids              = ["sg-123456789"]
+  image_id                        = "ami-123456789"
+  iam_instance_profile            = "arn:aws:iam::123456789:instance-profile/ecsInstanceRole"
+
+  tags = {CreatedBy = "terraform"}
 }
 ```
 
-## Examples
+## Providers
 
-- [Basic](examples/basic)
+| Name | Version   |
+|------|-----------|
+| spotinst | >= 1.78.0 |
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Modules
+* `ecs-ocean` - Creates Ocean Cluster
+* `ecs-ocean-launchspec` - (Optional) Add custom virtual node groups [Doc](https://registry.terraform.io/modules/spotinst/ocean-aws-ecs-vng/spotinst/latest)
 
 ## Documentation
 
@@ -57,7 +49,7 @@ We use GitHub issues for tracking bugs and feature requests. Please use these co
 
 ## Contributing
 
-Please see the [contribution guidelines](.github/CONTRIBUTING.md).
+Please see the [contribution guidelines](CONTRIBUTING.md).
 
 ## License
 
