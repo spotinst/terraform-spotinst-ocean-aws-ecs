@@ -270,3 +270,9 @@ variable "data_integration_id" {
 	default 	= null
 	description = "The identifier of The S3 data integration to export the logs to."
 }
+
+variable "availability_vs_cost" {
+	type        = string
+	default     = "balanced"
+	description = "(Optional, Default: balanced) You can control the approach that Ocean takes while launching nodes by configuring this value. Possible values: costOriented,balanced,cheapest"
+}
