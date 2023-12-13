@@ -103,7 +103,7 @@ variable "spot_percentage" {
 variable "utilize_commitments" {
 	type 		= bool
 	default 	= null
-	description = "If savings plans exist, Ocean will utilize them before launching Spot instances."
+	description = "If savings plans commitment has available capacity, Ocean will utilize them alongside RIs (if exist) to maximize cost efficiency."
 }
 variable "http_tokens" {
 	type 		= string
@@ -269,4 +269,10 @@ variable "data_integration_id" {
     type 		= string
 	default 	= null
 	description = "The identifier of The S3 data integration to export the logs to."
+}
+
+variable "availability_vs_cost" {
+	type        = string
+	default     = "balanced"
+	description = "(Optional, Default: balanced) You can control the approach that Ocean takes while launching nodes by configuring this value. Possible values: costOriented,balanced,cheapest"
 }
