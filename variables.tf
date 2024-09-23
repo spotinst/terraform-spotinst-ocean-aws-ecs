@@ -275,3 +275,9 @@ variable "data_integration_id" {
   default     = null
   description = "The identifier of The S3 data integration to export the logs to."
 }
+
+variable "use_as_template_only" {
+  type        = bool
+  default     = false
+  description = "Use the Ocean cluster as a template only."
+}
