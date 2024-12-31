@@ -3,9 +3,16 @@
 
 
 
-<a name="v0.3.0"></a>
-## [v0.3.0] (December 13, 2023)
+<a name="v0.4.0"></a>
+## [v0.4.0] (December 31, 2024)
 
+- added `fallback_to_ondemand` field ([#9](https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/issues/9))
+
+
+<a name="v0.3.0"></a>
+## [v0.3.0] (December 14, 2023)
+
+- Changelog v0.3.0 ([#7](https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/issues/7))
 - feat: Setting cluster_orientation parameter ([#5](https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/issues/5))
 - Added support for `cluster_orientation`. ([#6](https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/issues/6))
 
@@ -27,6 +34,7 @@
 - Initial commit
 
 
-[Unreleased]: https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/compare/v0.4.0...HEAD
+[v0.4.0]: https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/compare/v0.3.0...v0.4.0
 [v0.3.0]: https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/compare/v0.2.0...v0.3.0
 [v0.2.0]: https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/compare/v0.1.0...v0.2.0
