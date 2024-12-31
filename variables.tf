@@ -275,3 +275,9 @@ variable "data_integration_id" {
   default     = null
   description = "The identifier of The S3 data integration to export the logs to."
 }
+
+variable "fallback_to_ondemand" {
+  type        = bool
+  default     = true
+  description = "Launch On-Demand in the event there are no spot instances available"
+}
