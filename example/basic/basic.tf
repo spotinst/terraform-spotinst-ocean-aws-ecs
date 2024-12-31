@@ -22,6 +22,7 @@ module "ocean_ecs" {
   image_id             = "ami-1234567890"
   iam_instance_profile = "arn:aws:iam::1234567890:instance-profile/myECSRole"
   availability_vs_cost = "costOriented"
+  fallback_to_ondemand = true
 
   tags = { CreatedBy = "terraform" }
 }
