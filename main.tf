@@ -48,6 +48,7 @@ resource "spotinst_ocean_ecs" "ocean_ecs" {
   spot_percentage             = var.spot_percentage
   utilize_commitments         = var.utilize_commitments
   fallback_to_ondemand        = var.fallback_to_ondemand
+  use_as_template_only        = var.use_as_template_only
 
   cluster_orientation {
     availability_vs_cost = var.availability_vs_cost

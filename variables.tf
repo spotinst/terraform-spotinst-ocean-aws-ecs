@@ -281,3 +281,9 @@ variable "fallback_to_ondemand" {
   default     = true
   description = "Launch On-Demand in the event there are no spot instances available"
 }
+
+variable "use_as_template_only" {
+  type        = bool
+  default     = false
+  description = "Use the Ocean cluster as a template only."
+}

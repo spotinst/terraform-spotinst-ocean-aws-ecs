@@ -23,6 +23,7 @@ module "ocean_ecs" {
   iam_instance_profile = "arn:aws:iam::1234567890:instance-profile/myECSRole"
   availability_vs_cost = "costOriented"
   fallback_to_ondemand = true
+  use_as_template_only = true
 
   tags = { CreatedBy = "terraform" }
 }
