@@ -224,6 +224,13 @@ variable "auto_headroom_percentage" {
   default     = null
   description = "The auto-headroom percentage. Set a number between 0-200 to control the headroom % of the cluster. Relevant when isAutoConfig= true."
 }
+
+variable "enable_automatic_and_manual_headroom" {
+  type        = bool
+  default     = false
+  description = "When set to true, both automatic and per custom launch specification manual headroom to be saved concurrently and independently in the cluster. prerequisite: autoscaler_is_auto_config must be true."
+}
+
 ###################
 
 ## Update Policy ##
