@@ -3,9 +3,16 @@
 
 
 
+<a name="v0.6.0"></a>
+## [v0.6.0] (May 6, 2025)
+
+- Add support for `enable_automatic_and_manual_headroom` field ([#13](https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/issues/13))
+
+
 <a name="v0.5.0"></a>
 ## [v0.5.0] (January 30, 2025)
 
+- Changelog 0.5.0 ([#12](https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/issues/12))
 - added support for `use_as_template_only` field ([#11](https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/issues/11))
 
 
@@ -41,7 +48,8 @@
 - Initial commit
 
 
-[Unreleased]: https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/compare/v0.6.0...HEAD
+[v0.6.0]: https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/compare/v0.5.0...v0.6.0
 [v0.5.0]: https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/compare/v0.4.0...v0.5.0
 [v0.4.0]: https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/compare/v0.3.0...v0.4.0
 [v0.3.0]: https://github.com/spotinst/terraform-spotinst-ocean-aws-ecs/compare/v0.2.0...v0.3.0
