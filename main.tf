@@ -140,12 +140,12 @@ resource "spotinst_ocean_ecs" "ocean_ecs" {
     for_each = var.scheduled_task != null ? [var.scheduled_task] : []
     content {
       shutdown_hours {
-        is_enabled   = scheduled_task.value.is_enabled
-        time_windows = scheduled_task.value.time_windows
+        is_enabled   = scheduled_task.value.shutdown_is_enabled
+        time_windows = scheduled_task.value.shutdown_time_windows
       }
       tasks {
         cron_expression = scheduled_task.value.cron_expression
-        is_enabled      = scheduled_task.value.is_enabled
+        is_enabled      = scheduled_task.value.taskscheduling_is_enabled
         task_type       = scheduled_task.value.task_type
       }
     }
